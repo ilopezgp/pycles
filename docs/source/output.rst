@@ -23,7 +23,7 @@ Contains the vertical profile of horizontally-averaged variables at every output
 **u_mean2** : :math:`\overline{{\tilde{u}}^2} = \overline{\tilde{u}\tilde{u}}(t, z)` 
 	Second moment of the x-axis component of the filtered velocity.
 
-**v_mean2** : :math:`\overline{{\tilde{v}}^2} = \overline{\tilde{v}\tilde{w}}(t, z)` 
+**v_mean2** : :math:`\overline{{\tilde{v}}^2} = \overline{\tilde{v}\tilde{v}}(t, z)` 
 	Second moment of the x-axis component of the filtered velocity.
 
 **w_mean2** : :math:`\overline{{\tilde{w}}^2} = \overline{\tilde{w}\tilde{w}}(t, z)` 
@@ -39,10 +39,13 @@ Contains the vertical profile of horizontally-averaged variables at every output
 	Third moment of the z-axis component of the filtered velocity.
 
 **tke_nd_mean** : :math:`\bar{\tilde{e}} = \dfrac{1}{2}\overline{\tilde{u'_i}\tilde{u'_i}}(t, z)`
-	Nondimensional turbulence kinetic energy of the filtered fields.
+	Nondimensional turbulence kinetic energy of the filtered fields (resolved TKE).
 
 **tke_mean** : :math:`\bar{\tilde{e_m}} = \dfrac{1}{2}\rho\overline{\tilde{u'_i}\tilde{u'_i}}(t, z)`
-	Turbulence kinetic energy of the filtered fields.
+	Turbulence kinetic energy of the filtered fields (resolved TKE).
+
+**e_mean** : :math:`\bar{e}_{sgs} = \bar{e}_{sgs}(t, z)`
+	Nondimensional subgrid-scale turbulence kinetic energy, prognostic variable in the 1.5-order TKE SGS closure.
 
 
 
