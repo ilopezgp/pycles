@@ -9,7 +9,9 @@ All output statistics are stored in NetCDF format in the file `stats/Stats.CASE_
 Profiles
 ++++++++
 
-Contains the vertical profile of horizontally-averaged variables at every output timestep: `var = var(t, z)`
+Contains the vertical profile of horizontally-averaged variables at every output timestep: `var = var(t, z)`. For all variables, :math:`\: \bar{\cdot} \:` represents the mean in a horizontal section at height `z`, and :math:`\: \tilde{\cdot} \:` the resolved variable (filtered by the grid or an explicit filter). :math:`\\`
+
+
 
 **u_mean** : :math:`\bar{\tilde{u}} = \bar{\tilde{u}}(t, z)`
 	x-axis component of the mean filtered velocity.
@@ -39,13 +41,13 @@ Contains the vertical profile of horizontally-averaged variables at every output
 	Third moment of the z-axis component of the filtered velocity.
 
 **tke_nd_mean** : :math:`\bar{\tilde{e}} = \dfrac{1}{2}\overline{\tilde{u'_i}\tilde{u'_i}}(t, z)`
-	Nondimensional turbulence kinetic energy of the filtered fields (resolved TKE).
+	Turbulence kinetic energy of the filtered fields (resolved TKE) per unit mass.
 
 **tke_mean** : :math:`\bar{\tilde{e_m}} = \dfrac{1}{2}\rho\overline{\tilde{u'_i}\tilde{u'_i}}(t, z)`
-	Turbulence kinetic energy of the filtered fields (resolved TKE).
+	Turbulence kinetic energy of the filtered fields (resolved TKE) per unit volume.
 
 **e_mean** : :math:`\bar{e}_{sgs} = \bar{e}_{sgs}(t, z)`
-	Nondimensional subgrid-scale turbulence kinetic energy, prognostic variable in the 1.5-order TKE SGS closure.
+	Subgrid-scale turbulence kinetic energy per unit mass, prognostic variable in the 1.5-order TKE SGS closure (computed only if this turbulence closure is used).
 
 
 
